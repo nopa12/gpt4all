@@ -137,7 +137,7 @@ bool LLamaModel::loadModel(const std::string &modelPath)
     d_ptr->params = llama_context_default_params();
 
     gpt_params params;
-    d_ptr->params.n_ctx      = 2048;
+    d_ptr->params.n_ctx      = 16384;
     d_ptr->params.seed       = params.seed;
     d_ptr->params.f16_kv     = params.memory_f16;
     d_ptr->params.use_mmap   = params.use_mmap;
